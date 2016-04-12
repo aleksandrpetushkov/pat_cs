@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ICypher.h">
+    <ClInclude Include="Alg.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="xor.h">
+    <ClInclude Include="Cypher.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Xor.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

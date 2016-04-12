@@ -1,40 +1,26 @@
 #include <iostream>
-#include "ICypher.h"
+#include "Cypher.h"
+#include <string>
 using namespace std;
 
 int main()
 {
+	//*
+	Xor _xor;
+	Alg *alg = &_xor;
 
-
-
-
-	/*
-	string st="Hello";
-	string key = "jfoefefm";
-	cout << st;
-	unsigned int k = 0;
-	for (unsigned int i = 0; i < st.length(); ++i, ++k)
-	{
-		if(k==key.length())
-		{
-			k = 0;
-		}
-		st[i] ^= key[k];
-	}
 	
+	string e_st, d_st, c, st;
 	
-	cout << st << " end\n";
-	k = 0;
-	for (unsigned int i = 0; i < st.length(); ++i, ++k)
-	{
-		if (k == key.length())
-		{
-			k = 0;
-		}
-		st[i] ^= key[k];
-	}
-	cout << st;
-	*/
+	st = "Hello world"; //Открытый текст 
+	c = "SuperKey"; //Ключ
+	Cypher cp; //Объект шифратор
+	cp.SetAlg(alg); //Устанавливается алгоритм шифрования
+	e_st = cp.encryption(st, c); //Шифровка 
+	d_st = cp.decryption(e_st, c);//Дешифровка 
+	cout << e_st << endl << d_st; // вывод
+	//*/
 
+	
 	cin.get();
 }
