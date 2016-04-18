@@ -121,7 +121,6 @@
   <ItemGroup>
     <ClInclude Include="Alg.h" />
     <ClInclude Include="Cypher.h" />
-    <ClInclude Include="Xor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
