@@ -1,11 +1,11 @@
 #include "Alg.h"
 
 
-class Cypher  //КЛасс шифрования (context - по стратегии)
+class Cypher  //Кkасс шифрования 
 {
 
 public: 
-	void SetAlg(Alg* alg) //метод установки алгоритма
+	void SetAlg(Alg* alg) //метод установки алгоритма 
 	{
 		_alg = alg;
 	}

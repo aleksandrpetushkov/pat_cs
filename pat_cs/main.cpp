@@ -7,7 +7,7 @@ int main()
 {
 	//*
 	Xor _xor;
-	Alg *alg = &_xor;
+	CBC _cbc;
 
 	
 	string e_st, d_st, c, st;
@@ -15,12 +15,18 @@ int main()
 	st = "Hello world"; //Открытый текст 
 	c = "SuperKey"; //Ключ
 	Cypher cp; //Объект шифратор
-	cp.SetAlg(alg); //Устанавливается алгоритм шифрования
+	cp.SetAlg(&_xor); //Устанавливается алгоритм шифрования (обычный XOR)
 	e_st = cp.encryption(st, c); //Шифровка 
 	d_st = cp.decryption(e_st, c);//Дешифровка 
-	cout << e_st << endl << d_st; // вывод
-	//*/
+	cout<< "XOR:\n" << "	Original: " << st << endl << "	Encryption: " << e_st << endl << "	Decryption: " << d_st << endl; // вывод
 
-	
+	cp.SetAlg(&_cbc); //Устанавливается алгоритм шифрования CBC
+	e_st = cp.encryption(st, c); //Шифровка 
+	d_st = cp.decryption(e_st, c);//Дешифровка 
+	cout << "CBC:\n" << "	Original: " << st << endl << "	Encryption: " << e_st << endl << "	Decryption: " << d_st << endl; // вывод
+
+
+
+	//*/
 	cin.get();
 }
