@@ -7,7 +7,7 @@ using namespace std;
 
 
 //*
-TEST(XOR, encryption)
+TEST(XOR, encryption) //Тест шифровки XOR
 {
 	Xor _xor;
 	string e_st, e_tst, c, st;
@@ -33,7 +33,7 @@ TEST(XOR, encryption)
 }
 //*/
 
-TEST(XOR, decryption)
+TEST(XOR, decryption) //Тест дешифровки XOR
 {
 	Xor _xor;
 	string e_tst, d_st, c, st;
@@ -60,7 +60,7 @@ TEST(XOR, decryption)
 	EXPECT_EQ("TestString", d_st);
 }
 
-TEST(CBC, encryption)
+TEST(CBC, encryption) //Тест шифровки CBC
 {
 	CBC _cbc;
 	string e_st, e_tst, d_st, c, st;
@@ -91,7 +91,7 @@ TEST(CBC, encryption)
 }
 
 
-TEST(CBC, decryption)
+TEST(CBC, decryption)  //Тетст дешифровки CBC
 {
 	CBC _cbc;
 	string e_st, e_tst, d_st, c, st;
@@ -118,7 +118,7 @@ TEST(CBC, decryption)
 	d_st = cp.decryption(e_tst, c);
 
 
-	EXPECT_EQ(e_tst, e_st);
+	EXPECT_EQ(st, d_st);
 }
 
 int main(int argc, char ** argv)
