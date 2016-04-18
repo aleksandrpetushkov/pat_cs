@@ -50,9 +50,7 @@ class CBC :public Alg
 	std::string	encryption(const std::string &s, const std::string &c) //Методе кодировки 
 	{
 		std::string result = s;
-		int z;
-		int i = 0;
-		for (; i < s.length(); ++i)
+		for (int i = 0; i < s.length(); ++i)
 		{
 			if (s.length() == i)
 			{
@@ -64,7 +62,6 @@ class CBC :public Alg
 			}
 			else
 			{
-				z = i - c.length();
 				result[i] ^= result[i - c.length()];
 			}
 
@@ -73,7 +70,7 @@ class CBC :public Alg
 
 	}
 	
-	std::string decryption(const std::string &s, const std::string &c)
+	std::string decryption(const std::string &s, const std::string &c) //Декодирование
 	{
 		std::string result = s;
 		for (int i = s.length(); i != 0; --i)
